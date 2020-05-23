@@ -1,10 +1,10 @@
 # clojure-beginner
 
-A Clojure library designed to ... well, that part is up to you.
+A simple Clojure RESTful server to place a dot in or out of a triangle.
 
 ## Usage
 
-FIXME
+tbd
 
 ## License
 
