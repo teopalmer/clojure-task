@@ -1,10 +1,8 @@
 # clojure-beginner
 
-A simple Clojure RESTful server to place a dot in or out of a triangle.
+A simple Clojure RESTful server to place a dot in or out of a triangle. Works on port 3003.
 
 ## Usage
-
-port:3003
 
 lein run
 
