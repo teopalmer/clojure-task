@@ -4,7 +4,9 @@ A simple Clojure RESTful server to place a dot in or out of a triangle.
 
 ## Usage
 
-tbd
+port:3003
+
+lein run
 
 ## License
 
