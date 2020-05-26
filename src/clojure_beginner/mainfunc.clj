@@ -15,3 +15,13 @@
         ]
     cond
     ))
+
+(defn check [ax ay, bx by, cx cy, px py]
+  (let [result (is-in (Integer/parseInt px) (Integer/parseInt py) (Integer/parseInt ax)
+                      (Integer/parseInt ay) (Integer/parseInt bx) (Integer/parseInt by)
+                      (Integer/parseInt cx) (Integer/parseInt cy))]
+  (if result
+    "inside the triangle"
+    "out of the triangle")
+  )
+  )

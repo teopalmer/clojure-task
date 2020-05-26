@@ -5,32 +5,32 @@
         clojure-beginner.mainfunc))
 
 
-
-
-(defn page [a]
+(defn page [ax ay bx by cx cy px py]
   (str "<html><body>"
-       (if a
-         (str "Nice to meet you, " a "!")
-         (str "<form>"
-              "A(x): <input a='ax' type='number'>
+       (if ax
+         (str "The dot is " (check ax ay, bx by, cx cy, px py) "!")
+         (str "Enter vertices of a triangle and a point:"
+           "<form>"
+              "A(x): <input name='ax' type='number'>
               (y): <input name='ay' type='number'><br>"
-              "B(x): <input a='bx' type='number'>
+              "B(x): <input name='bx' type='number'>
               (y): <input name='by' type='number'><br>"
-              "C(x): <input a='cx' type='number'>
+              "C(x): <input name='cx' type='number'>
               (y): <input name='cy' type='number'><br>"
-              "Point (x): <input a='px' type='number'>\n
+              "Point (x): <input name='px' type='number'>\n
               (y): <input name='py' type='number'><br>"
               "<input type='submit'>"
               "</form>"))
        "</body></html>"))
 
-(defn handler [{{name "name"} :params}]
-  (-> (response (page name))
+(defn handler [{{ax "ax" ay "ay" bx "bx" by "by" cx "cx" cy "cy" px "px" py "py"} :params}]
+  (-> (response (page ax ay bx by cx cy px py))
       (content-type "text/html")))
 
 (def app
   (-> handler wrap-params))
 
 (defn -main []
-  (run-jetty app {:port 3000})
-  (println (is-in 7 2 4 -1 6 4 12 3)))
+  (run-jetty app {:port 3003})
+  ;(println (is-in 4 -1 6 4 12 3 7 2))
+  )
